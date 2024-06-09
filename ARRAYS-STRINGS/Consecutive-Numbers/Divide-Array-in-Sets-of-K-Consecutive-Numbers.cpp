@@ -4,7 +4,9 @@
 
 // Given an integer array hand where hand[i] is the value written on the ith card and an integer groupSize, return true if she can rearrange the cards, or false otherwise.
 
-https://leetcode.com/problems/hand-of-straights/description/
+// https://leetcode.com/problems/hand-of-straights/description/
+
+// Note: This question is the same as 1296: https://leetcode.com/problems/divide-array-in-sets-of-k-consecutive-numbers/
 
 typedef long long ll;
 class Solution {
