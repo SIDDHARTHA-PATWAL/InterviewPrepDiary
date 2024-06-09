@@ -4,7 +4,7 @@
 
 // Given an integer array hand where hand[i] is the value written on the ith card and an integer groupSize, return true if she can rearrange the cards, or false otherwise.
 
-<!-- https://leetcode.com/problems/hand-of-straights/description/ -->
+https://leetcode.com/problems/hand-of-straights/description/
 
 typedef long long ll;
 class Solution {
