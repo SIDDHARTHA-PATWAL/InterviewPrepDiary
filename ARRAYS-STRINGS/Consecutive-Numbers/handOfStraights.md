@@ -9,8 +9,8 @@
 typedef long long ll;
 class Solution {
 public:
-     //this solution is working
-     bool isNStraightHand(vector<int>& hand, int groupSize) {
+    //this solution is working
+    bool isNStraightHand(vector<int>& hand, int groupSize) {
         int n = hand.size();
         if(n%groupSize!=0)return false;
 
