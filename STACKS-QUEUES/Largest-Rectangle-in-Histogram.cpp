@@ -57,3 +57,39 @@ public:
         return maxi;
     }
 };
+
+class Solution {
+public:
+    int largestRectangleArea(vector<int>& heights) {
+        // TC->O(2*N + N ) SC->O(3N)
+        int  n = heights.size();int maxi=0;
+        vector<int> nse(n,n); stack<int> s;
+        vector<int> pse(n,-1);
+        
+        for(int i=0;i<n;i++){
+                while(!s.empty() && heights[s.top()]>heights[i]){  // heights[sn.top()]>=heights[i] should not be there conceptually 
+                                                                    // but it will still work becuase of the nature of the max area problem
+                    nse[s.top()]= i;
+                    s.pop();
+                }
+                if(!s.empty()) pse[i]= s.top();
+                s.push(i);
+        }
+      
+    //   heights[sn.top()]>=heights[i]
+        // 1 6 3 4 5 6 7    // nse
+        // 6 24 5 10 15 20 14   //area
+
+    //   heights[sn.top()]>heights[i]  //this is correct
+        // 1 6 6 6 6 6 7    // nse 
+        // 6 24 20 20 20 20 14    //area
+
+        // yet the maximum  area is same
+       
+        for(int i=0;i<n;i++){
+            int area= ((nse[i]-1)-(pse[i]+1)+1)*heights[i];
+            maxi= max(area, maxi);
+        }
+        return maxi;
+    }
+};
